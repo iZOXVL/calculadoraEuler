@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Input, Button, Chip} from "@nextui-org/react";
 import confetti from 'canvas-confetti';
+import { error } from 'console';
 
 export default function Home() {
   const handleConfetti = () => {
@@ -37,7 +38,8 @@ export default function Home() {
       x: x.toFixed(6),
       y: data.y_euler[index].toFixed(6),
       y_final: data.y_final_euler,
-      y_real: data.y_real[index].toFixed(6)
+      y_real: data.y_real[index].toFixed(6),
+      error: data.error_absoluto[index].toFixed(6)
     }));
 
     setResultados(results);
@@ -78,8 +80,9 @@ export default function Home() {
                 <TableColumn>Vuelta</TableColumn>
                 <TableColumn>Valor de X</TableColumn>
                 <TableColumn>Valor de Y</TableColumn>
-                <TableColumn>Valor Final de Y Euler</TableColumn>
                 <TableColumn>Valor Real de Y</TableColumn>
+                <TableColumn>Error absoluto</TableColumn>
+                <TableColumn>Valor Final de Y Euler</TableColumn>
               </TableHeader>
               <TableBody>
                 {resultados.map((result, index) => (
@@ -87,8 +90,9 @@ export default function Home() {
                     <TableCell className="text-white"><Chip color="neutral">{result.vuelta}</Chip></TableCell>
                     <TableCell className="text-white"><Chip color="primary">{result.x}</Chip></TableCell>
                     <TableCell className="text-white"><Chip color="secondary">{result.y}</Chip></TableCell>
-                    <TableCell className="text-white"><Chip color="success" >{result.y_final}</Chip></TableCell>
                     <TableCell className="text-white"><Chip color="warning">{result.y_real}</Chip></TableCell>
+                    <TableCell className="text-white"><Chip color="danger">{result.error}</Chip></TableCell>
+                    <TableCell className="text-white"><Chip color="success" >{result.y_final}</Chip></TableCell>
                   </TableRow>
                 ))}
               </TableBody>
