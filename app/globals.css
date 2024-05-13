@@ -18,7 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: url(bg.svg);
+  background-image: url(bg.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -27,4 +27,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.title{
+  color:#C4B59F;
+  filter: drop-shadow(5px 5px 1px #978B7A);
+}
+
+.btnbg{
+  background-color: #C4B59F;
 }
