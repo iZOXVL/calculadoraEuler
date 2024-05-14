@@ -105,7 +105,6 @@ export default function Home() {
                       <TableCell className="text-white"><Chip className="btnbg">{result.y}</Chip></TableCell>
                       <TableCell className="text-white"><Chip className="btnbg">{result.y_real}</Chip></TableCell>
                       <TableCell className="text-white"><Chip className="btnbg">{result.error}</Chip></TableCell>
-                      <TableCell className="text-white"><Chip className="btnbg">{result.y_final}</Chip></TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
