@@ -95,7 +95,6 @@ export default function Home() {
                   <TableColumn>Valor de Y</TableColumn>
                   <TableColumn>Valor Real de Y</TableColumn>
                   <TableColumn>Error absoluto</TableColumn>
-                  <TableColumn>Valor Final de Y Euler</TableColumn>
                 </TableHeader>
                 <TableBody>
                   {resultados.map((result, index) => (
